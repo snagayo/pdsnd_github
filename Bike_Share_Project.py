@@ -90,20 +90,6 @@ def duration_in_mins(datum, city):
     return duration
 
 
-# Some tests to check that your code works. There should be no output if all of
-# the assertions pass. The `example_trips` dictionary was obtained from when
-# you printed the first trip from each of the original data files.
-tests = {'NYC': 13.9833,
-         'Chicago': 15.4333,
-         'Washington': 7.1231}
-
-for city in tests:
-    assert abs(duration_in_mins(example_trips[city], city) - tests[city]) < .001
-
-
-
-
-
 def time_of_trip(datum, city):
     """
     Takes as input a dictionary containing info about a single trip (datum) and
@@ -137,16 +123,6 @@ def time_of_trip(datum, city):
     return (month, hour, day_of_week)
 
 
-tests = {'NYC': (1, 0, 'Friday'),
-         'Chicago': (3, 23, 'Thursday'),
-         'Washington': (3, 22, 'Thursday')}
-
-for city in tests:
-    assert time_of_trip(example_trips[city], city) == tests[city]
-
-
-
-
 def type_of_user(datum, city):
     """
     Takes as input a dictionary containing info about a single trip (datum) and
@@ -168,19 +144,6 @@ def type_of_user(datum, city):
             user_type = 'Customer'
             
     return user_type
-
-
-# Some tests to check that your code works. There should be no output if all of
-# the assertions pass. The `example_trips` dictionary was obtained from when
-# you printed the first trip from each of the original data files.
-tests = {'NYC': 'Customer',
-         'Chicago': 'Subscriber',
-         'Washington': 'Subscriber'}
-
-for city in tests:
-    assert type_of_user(example_trips[city], city) == tests[city]
-
-
 
 
 def condense_data(in_file, out_file, city):
@@ -224,22 +187,6 @@ def condense_data(in_file, out_file, city):
             f_out.write("{},".format(new_point['week'][1]))
             f_out.write("{},".format(new_point['day_of_week'][2]))
             f_out.write("{}\n".format(new_point['user_type']))
-
-
-
-
-
-# Run this cell to check your work
-city_info = {'Washington': {'in_file': './data/Washington-CapitalBikeshare-2016.csv',
-                            'out_file': './data/Washington-2016-Summary.csv'},
-             'Chicago': {'in_file': './data/Chicago-Divvy-2016.csv',
-                         'out_file': './data/Chicago-2016-Summary.csv'},
-             'NYC': {'in_file': './data/NYC-CitiBike-2016.csv',
-                     'out_file': './data/NYC-2016-Summary.csv'}}
-
-for city, filenames in city_info.items():
-    condense_data(filenames['in_file'], filenames['out_file'], city)
-    print_first_point(filenames['out_file'])
 
 
 # ## Exploratory Data Analysis
