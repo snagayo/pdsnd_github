@@ -51,7 +51,7 @@
 # 
 # > **Tip**: You can run a code cell like you formatted Markdown cells above by clicking on the cell and using the keyboard shortcut **Shift** + **Enter** or **Shift** + **Return**. Alternatively, a code cell can be executed using the **Play** button in the toolbar after selecting it. While the cell is running, you will see an asterisk in the message to the left of the cell, i.e. `In [*]:`. The asterisk will change into a number to show that execution has completed, e.g. `In [1]`. If there is output, it will show up as `Out [1]:`, with an appropriate number to match the "In" number.
 
-# In[11]:
+
 
 
 ## import all necessary packages and functions.
@@ -61,7 +61,7 @@ from pprint import pprint # use to print data structures like dictionaries in
                           # a nicer way than the base print function.
 
 
-# In[12]:
+
 
 
 def print_first_point(filename):
@@ -121,7 +121,7 @@ for data_file in data_files:
 # 
 # **Question 3a**: Complete the helper functions in the code cells below to address each of the cleaning tasks described above.
 
-# In[13]:
+
 
 
 datum = {}
@@ -159,7 +159,7 @@ for city in tests:
     assert abs(duration_in_mins(example_trips[city], city) - tests[city]) < .001
 
 
-# In[15]:
+
 
 
 def time_of_trip(datum, city):
@@ -205,7 +205,7 @@ for city in tests:
     assert time_of_trip(example_trips[city], city) == tests[city]
 
 
-# In[16]:
+
 
 
 def type_of_user(datum, city):
@@ -244,7 +244,7 @@ for city in tests:
 
 # **Question 3b**: Now, use the helper functions you wrote above to create a condensed data file for each city consisting only of the data fields indicated above. In the `/examples/` folder, you will see an example datafile from the [Bay Area Bike Share](http://www.bayareabikeshare.com/open-data) before and after conversion. Make sure that your output is formatted to be consistent with the example file.
 
-# In[22]:
+
 
 
 
@@ -291,7 +291,7 @@ def condense_data(in_file, out_file, city):
             f_out.write("{}\n".format(new_point['user_type']))
 
 
-# In[23]:
+
 
 
 # Run this cell to check your work
@@ -325,7 +325,7 @@ for city, filenames in city_info.items():
 # NYC has the highest proportion of trips made by subscribers, the percentage is 88.84%
 # Chicago has the highest proportion of trips made by customers, the percentage is 23.77%
 
-# In[37]:
+
 
 
 def number_of_trips(filename):
@@ -364,7 +364,7 @@ def number_of_trips(filename):
         return(n_subscribers, n_customers, n_total, pct_subs, pct_custs, avg_subs_ride, avg_cust_ride)
 
 
-# In[39]:
+
 
 
 ## Modify this and the previous cell to answer Question 4a. Remember to run ##
@@ -404,7 +404,7 @@ print('{} has the highest proportion of trips made by customers, the percentage 
 # The average trip length for NYC is 15.81 (min), the proportion of rides made are longer that 30 mins is 7.30%
 # The average trip length for Chicago is 16.56 (min), the proportion of rides made are longer that 30 mins is 8.33%
 
-# In[43]:
+
 
 
 ## Use this and additional cells to answer Question 4b.                 ##
@@ -466,7 +466,7 @@ print('The average trip length for {} is {:.2f} (min), the proportion of rides m
 # 
 # **Answer**: Customers in Washington take longer rides on the average.The average subscriber trip duration is 12.53(mins), the average customer trip duration is 41.68(mins)
 
-# In[49]:
+
 
 
 ## Use this and additional cells to answer Question 4c. If you have    ##
@@ -491,7 +491,7 @@ else:
 # 
 # The last set of values that you computed should have pulled up an interesting result. While the mean trip time for Subscribers is well under 30 minutes, the mean trip time for Customers is actually _above_ 30 minutes! It will be interesting for us to look at how the trip times are distributed. In order to do this, a new library will be introduced here, `matplotlib`. Run the cell below to load the library and to generate an example plot.
 
-# In[52]:
+
 
 
 # load library
@@ -518,7 +518,7 @@ plt.show()
 # 
 # You will now use these functions to create a histogram of the trip times for the city you selected in question 4c. Don't separate the Subscribers and Customers for now: just collect all of the trip times and plot them.
 
-# In[54]:
+
 
 
 ## Use this and additional cells to collect all of the trip times as a list ##
@@ -555,7 +555,7 @@ plt.show()
 # 
 # **Answer**: In Washington, the peak for subscriber trip distribution is found in the 5-10 mins bin, while the peak for the customer trip distribution in the 15-20 mins bin. Both distributions are right-skewed.  
 
-# In[57]:
+
 
 
 ## Use this and additional cells to answer Question 5. ##
@@ -612,7 +612,7 @@ plt.show()
 # As for the ratio for trips between Customer and Subscribers, it shows that Winter has the highest ratio for the three (3) cities.
 # 
 
-# In[79]:
+
 
 
 import matplotlib.pyplot as plt
@@ -740,7 +740,7 @@ plt.show()
 # 
 # > Either way, once you've gotten the .html report in your workspace, you can complete your submission by clicking on the "Submit Project" button to the lower-right hand side of the workspace.
 
-# In[ ]:
+
 
 
 from subprocess import call
