@@ -21,3 +21,4 @@ Washington.csv
 ### Credits
 Data used provided by Motivate
 
+A bike share system provider for many major cities in the United States
