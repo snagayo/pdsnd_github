@@ -503,9 +503,3 @@ plt.bar(x3,y3,alpha=0.5, label='Ratio' )
 plt.title('Subscriber-Customer Trip Ratio')
 plt.legend()
 plt.show()
-
-
-
-from subprocess import call
-call(['python', '-m', 'nbconvert', 'Bike_Share_Analysis.ipynb'])
-
