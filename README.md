@@ -1,15 +1,23 @@
 ### Date created
-Include the date you created this project and README file.
+June 22, 2020
 
 ### Project Title
-Replace the Project Title
+Exploring US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+Use of Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
 
 ### Files used
-Include the files used
+Files used are the following
+
+Bike_Share_Project.py
+
+Chicago.csv
+
+New_York.csv
+
+Washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Data used provided by Motivate
 
